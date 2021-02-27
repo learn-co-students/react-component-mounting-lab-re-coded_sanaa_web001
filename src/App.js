@@ -43,6 +43,9 @@ class App extends Component {
   })
 
   // adds a random number for timer ID
+  componentDidMount(){
+    this.handleAddTimer()
+  }
   handleAddTimer = () => {
     this.setState(prevState => ({
       timerIDs: [...prevState.timerIDs, Math.floor(Math.random()*1000)]
